@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B1FC2457-869B-47BC-936E-A9E35CA70A99}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Telegram.Bot4</RootNamespace>
+    <AssemblyName>Telegram.Bot4</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Threading.Tasks, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Args\CallbackQueryEventArgs.cs" />
+    <Compile Include="Args\ChosenInlineResultEventArgs.cs" />
+    <Compile Include="Args\InlineQueryEventArgs.cs" />
+    <Compile Include="Args\MessageEventArgs.cs" />
+    <Compile Include="Args\ReceiveErrorEventArgs.cs" />
+    <Compile Include="Args\ReceiveGeneralErrorEventArgs.cs" />
+    <Compile Include="Args\UpdateEventArgs.cs" />
+    <Compile Include="Converters\ChatIdConverter.cs" />
+    <Compile Include="Converters\FileToSendConverter.cs" />
+    <Compile Include="Converters\InlineQueryResultTypeConverter.cs" />
+    <Compile Include="Converters\ParseModeConverter.cs" />
+    <Compile Include="Converters\PhotoSizeConverter.cs" />
+    <Compile Include="Converters\UnixDatetimeConverter.cs" />
+    <Compile Include="Exceptions\ApiException.cs" />
+    <Compile Include="Helpers\Extensions.cs" />
+    <Compile Include="ITelegramBotClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TelegramBotClient.cs" />
+    <Compile Include="Types\Animation.cs" />
+    <Compile Include="Types\ApiResponse.cs" />
+    <Compile Include="Types\Audio.cs" />
+    <Compile Include="Types\CallbackGame.cs" />
+    <Compile Include="Types\CallbackQuery.cs" />
+    <Compile Include="Types\Chat.cs" />
+    <Compile Include="Types\ChatId.cs" />
+    <Compile Include="Types\ChatMember.cs" />
+    <Compile Include="Types\ChatPhoto.cs" />
+    <Compile Include="Types\ChosenInlineResult.cs" />
+    <Compile Include="Types\Contact.cs" />
+    <Compile Include="Types\Document.cs" />
+    <Compile Include="Types\Enums\ChatAction.cs" />
+    <Compile Include="Types\Enums\ChatMemberStatus.cs" />
+    <Compile Include="Types\Enums\ChatType.cs" />
+    <Compile Include="Types\Enums\FileType.cs" />
+    <Compile Include="Types\Enums\MaskPositionPoint.cs" />
+    <Compile Include="Types\Enums\MessageEntityType.cs" />
+    <Compile Include="Types\Enums\MessageType.cs" />
+    <Compile Include="Types\Enums\ParseMode.cs" />
+    <Compile Include="Types\Enums\UpdateType.cs" />
+    <Compile Include="Types\File.cs" />
+    <Compile Include="Types\FileToSend.cs" />
+    <Compile Include="Types\Game.cs" />
+    <Compile Include="Types\GameHighScore.cs" />
+    <Compile Include="Types\InlineKeyboardButtons\InlineKeyboardButton.cs" />
+    <Compile Include="Types\InlineKeyboardButtons\InlineKeyboardCallbackButton.cs" />
+    <Compile Include="Types\InlineKeyboardButtons\InlineKeyboardCallbackGameButton.cs" />
+    <Compile Include="Types\InlineKeyboardButtons\InlineKeyboardPayButton.cs" />
+    <Compile Include="Types\InlineKeyboardButtons\InlineKeyboardSwitchCallbackQueryCurrentChatButton.cs" />
+    <Compile Include="Types\InlineKeyboardButtons\InlineKeyboardSwitchInlineQueryButton.cs" />
+    <Compile Include="Types\InlineKeyboardButtons\InlineKeyboardUrlButton.cs" />
+    <Compile Include="Types\InlineQuery.cs" />
+    <Compile Include="Types\InlineQueryResults\InlineQueryResult.cs" />
+    <Compile Include="Types\InlineQueryResults\InlineQueryResultArticle.cs" />
+    <Compile Include="Types\InlineQueryResults\InlineQueryResultAudio.cs" />
+    <Compile Include="Types\InlineQueryResults\InlineQueryResultCached.cs" />
+    <Compile Include="Types\InlineQueryResults\InlineQueryResultCachedAudio.cs" />
+    <Compile Include="Types\InlineQueryResults\InlineQueryResultCachedDocument.cs" />
+    <Compile Include="Types\InlineQueryResults\InlineQueryResultCachedGif.cs" />
+    <Compile Include="Types\InlineQueryResults\InlineQueryResultCachedMpeg4Gif.cs" />
+    <Compile Include="Types\InlineQueryResults\InlineQueryResultCachedPhoto.cs" />
+    <Compile Include="Types\InlineQueryResults\InlineQueryResultCachedSticker.cs" />
+    <Compile Include="Types\InlineQueryResults\InlineQueryResultCachedVideo.cs" />
+    <Compile Include="Types\InlineQueryResults\InlineQueryResultCachedVoice.cs" />
+    <Compile Include="Types\InlineQueryResults\InlineQueryResultContact.cs" />
+    <Compile Include="Types\InlineQueryResults\InlineQueryResultDocument.cs" />
+    <Compile Include="Types\InlineQueryResults\InlineQueryResultGame.cs" />
+    <Compile Include="Types\InlineQueryResults\InlineQueryResultGif.cs" />
+    <Compile Include="Types\InlineQueryResults\InlineQueryResultLocation.cs" />
+    <Compile Include="Types\InlineQueryResults\InlineQueryResultMpeg4Gif.cs" />
+    <Compile Include="Types\InlineQueryResults\InlineQueryResultNew.cs" />
+    <Compile Include="Types\InlineQueryResults\InlineQueryResultPhoto.cs" />
+    <Compile Include="Types\InlineQueryResults\InlineQueryResultType.cs" />
+    <Compile Include="Types\InlineQueryResults\InlineQueryResultVenue.cs" />
+    <Compile Include="Types\InlineQueryResults\InlineQueryResultVideo.cs" />
+    <Compile Include="Types\InlineQueryResults\InlineQueryResultVoice.cs" />
+    <Compile Include="Types\InputMessageContents\InputContactMessageContent.cs" />
+    <Compile Include="Types\InputMessageContents\InputLocationMessageContent.cs" />
+    <Compile Include="Types\InputMessageContents\InputMessageContent.cs" />
+    <Compile Include="Types\InputMessageContents\InputTextMessageContent.cs" />
+    <Compile Include="Types\InputMessageContents\InputVenueMessageContent.cs" />
+    <Compile Include="Types\KeyboardButton.cs" />
+    <Compile Include="Types\Location.cs" />
+    <Compile Include="Types\MaskPosition.cs" />
+    <Compile Include="Types\Message.cs" />
+    <Compile Include="Types\MessageEntity.cs" />
+    <Compile Include="Types\Payments\Invoice.cs" />
+    <Compile Include="Types\Payments\LabeledPrice.cs" />
+    <Compile Include="Types\Payments\OrderInfo.cs" />
+    <Compile Include="Types\Payments\PreCheckoutQuery.cs" />
+    <Compile Include="Types\Payments\ShippingAddress.cs" />
+    <Compile Include="Types\Payments\ShippingOption.cs" />
+    <Compile Include="Types\Payments\ShippingQuery.cs" />
+    <Compile Include="Types\Payments\SuccessfulPayment.cs" />
+    <Compile Include="Types\PhotoSize.cs" />
+    <Compile Include="Types\ReplyMarkups\ForceReply.cs" />
+    <Compile Include="Types\ReplyMarkups\InlineKeyboardMarkup.cs" />
+    <Compile Include="Types\ReplyMarkups\IReplyMarkup.cs" />
+    <Compile Include="Types\ReplyMarkups\ReplyKeyboardMarkup.cs" />
+    <Compile Include="Types\ReplyMarkups\ReplyKeyboardRemove.cs" />
+    <Compile Include="Types\ReplyMarkups\ReplyMarkup.cs" />
+    <Compile Include="Types\ResponseParameters.cs" />
+    <Compile Include="Types\Sticker.cs" />
+    <Compile Include="Types\StickerSet.cs" />
+    <Compile Include="Types\Update.cs" />
+    <Compile Include="Types\User.cs" />
+    <Compile Include="Types\UserProfilePhotos.cs" />
+    <Compile Include="Types\Venue.cs" />
+    <Compile Include="Types\Video.cs" />
+    <Compile Include="Types\VideoNote.cs" />
+    <Compile Include="Types\Voice.cs" />
+    <Compile Include="Types\WebhookInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+</Project>
