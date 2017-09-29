@@ -1,14 +1,12 @@
-# .NET Client for Telegram Bot API
+# NOTE: IT IS A .NET 4.0 PORT
+# NOTHING TESTED. JUST BUILDABLE LIBRARY TO SUPPORT .NET FRAMEWORK 4.0
+
+# .NET 4.0 Client for Telegram Bot API
 
 [![Telegram Chat](https://img.shields.io/badge/Chat-Telegram-blue.svg)](https://t.me/tgbots_dotnet)
 [![license](https://img.shields.io/github/license/TelegramBots/telegram.bot.svg?maxAge=2592000)](https://raw.githubusercontent.com/TelegramBots/telegram.bot/master/LICENSE.txt)
 
-|Package|Branch|Build|Test|
-|:-----:|:----:|:---:|:--:|
-| [NuGet ![NuGet Release](https://img.shields.io/nuget/vpre/Telegram.Bot.svg?label=Telegram.Bot&maxAge=3600)](https://www.nuget.org/packages/Telegram.Bot/) | `master` | [![Build status](https://ci.appveyor.com/api/projects/status/x0vwuxdhe644sys0/branch/master?svg=true)](https://ci.appveyor.com/project/MrRoundRobin/telegram-bot/branch/master) | [![Test Status](https://img.shields.io/travis/TelegramBots/telegram.bot/master.svg?maxAge=3600&label=Test)](https://travis-ci.org/TelegramBots/telegram.bot) |
-| [MyGet ![MyGet](https://img.shields.io/myget/telegram-bot/v/Telegram.bot.svg?style=flat-square&maxAge=3600)](https://www.myget.org/feed/telegram-bot/package/nuget/Telegram.Bot) | `develop` | [![Build status](https://img.shields.io/appveyor/ci/MrRoundRobin/telegram-bot/develop.svg?style=flat-square)](https://ci.appveyor.com/project/MrRoundRobin/telegram-bot/branch/develop) | [![Test Status](https://img.shields.io/travis/TelegramBots/telegram.bot/develop.svg?style=flat-square&maxAge=3600&label=Test)](https://travis-ci.org/TelegramBots/telegram.bot) |
-
-.NET client for [Telegram Bot API](https://core.telegram.org/bots/api). The Bot API is an HTTP-based interface created for developers keen on building bots for Telegram.
+.NET 4.0 client for [Telegram Bot API](https://core.telegram.org/bots/api). The Bot API is an HTTP-based interface created for developers keen on building bots for Telegram.
 
 Join our **super group on Telegram**: [`@tgbots_dotnet`](https://t.me/tgbots_dotnet)
 
@@ -21,7 +19,7 @@ First, talk to [BotFather](https://t.me/botfather) on Telegram to get an API tok
 ```c#
 static async Task TestApiAsync()
 {
-    var botClient = new Telegram.Bot.TelegramBotClient("your API access Token");
+    var botClient = new Telegram.Bot4.TelegramBotClient("your API access Token");
     var me = await botClient.GetMeAsync();
     System.Console.WriteLine("Hello! My name is " + me.FirstName);
 }
@@ -42,19 +40,7 @@ Before submitting issues please consult following resources:
 
 ## Installation
 
-Install as [NuGet package](https://www.nuget.org/packages/Telegram.Bot/):
-
-Package manager:
-
-```powershell
-Install-Package Telegram.Bot
-```
-
-.NET CLI:
-
-```bash
-dotnet add package Telegram.Bot
-```
+There is no installation method of the port. Just build it yourself and add references
 
 For testing you can use the [MyGet feed](https://www.myget.org/gallery/telegram-bot) with automated builds.
 
